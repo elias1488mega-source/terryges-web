@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#087d78">
+<meta name="description" content="TERRYGES V1.1 — Plataforma de gestión de territorios.">
+<meta property="og:title" content="TERRYGES V1.1">
+<meta property="og:description" content="Gestión profesional de territorios, mapas, solicitudes y asignaciones.">
+<meta property="og:image" content="assets/branding/terryges_logo.png">
+<title>TERRYGES V1.1 — Gestión de Territorios</title>
+<link rel="icon" type="image/png" href="assets/branding/terryges_logo.png">
+<style>
+:root{
+ --ink:#092427;--muted:#5e7172;--paper:#fff;--soft:#f3f8f7;
+ --line:#d9e7e5;--teal:#087d78;--teal2:#075e5a;
+ --blue:#1399d5;--green:#48c51e;--dark:#071719;
+ --shadow:0 18px 55px rgba(7,35,37,.11);--radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--soft);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}
+.brand img{width:50px;height:50px;object-fit:contain;border-radius:14px}
+.brand span{font-size:1.18rem;letter-spacing:.5px}
+.navlinks{display:flex;gap:24px;font-weight:700;color:#536667}
+.navlinks a:hover{color:var(--teal)}
+.navcta{display:inline-flex;padding:10px 16px;border-radius:12px;background:var(--teal);color:#fff!important}
+.hero{overflow:hidden;position:relative;padding:84px 0 80px;background:
+ radial-gradient(circle at 8% 20%,rgba(19,153,213,.14),transparent 28%),
+ radial-gradient(circle at 88% 12%,rgba(72,197,30,.14),transparent 25%),
+ linear-gradient(180deg,#fff 0%,#f2f8f7 100%)}
+.hero:after{content:"";position:absolute;inset:auto -10% -180px;height:360px;background:radial-gradient(ellipse,rgba(8,125,120,.09),transparent 65%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:65px;position:relative;z-index:1}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#e6f5f3;color:var(--teal2);font-weight:800;font-size:.85rem}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
+h1{font-size:clamp(2.6rem,5vw,5rem);line-height:1.02;letter-spacing:-2px;margin:18px 0 20px}
+h1 em{font-style:normal;color:var(--teal)}
+.lead{font-size:1.17rem;color:var(--muted);max-width:680px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:13px;font-weight:800;border:1px solid transparent;transition:.2s}
+.btn.primary{background:var(--teal);color:#fff;box-shadow:0 10px 25px rgba(8,125,120,.18)}
+.btn.primary:hover{background:var(--teal2);transform:translateY(-2px)}
+.btn.light{background:#fff;border-color:var(--line);color:var(--teal2)}
+.btn.light:hover{border-color:var(--teal)}
+.hero-art{display:flex;justify-content:center}
+.hero-art .device{width:min(440px,92%);background:#fff;border:1px solid var(--line);border-radius:38px;padding:15px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.hero-art .device img{display:block;width:100%;border-radius:27px}
+.hero-logo{position:absolute;width:88px;right:22px;top:15px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12))}
+section{padding:82px 0}
+.section-title{max-width:760px;margin-bottom:34px}
+.section-title .eyebrow{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.8rem}
+h2{font-size:clamp(2rem,3.5vw,3rem);line-height:1.1;margin:8px 0 12px}
+.section-title p{color:var(--muted);font-size:1.05rem}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 30px rgba(7,35,37,.045)}
+.card .ico{font-size:1.7rem;margin-bottom:14px}
+.card h3{margin:0 0 7px}
+.card p{margin:0;color:var(--muted)}
+.workflow{background:var(--dark);color:#fff}
+.workflow .section-title p{color:#b9ccca}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.055);border-radius:20px;padding:22px}
+.step b{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#e6f5f3;color:var(--teal2);margin-bottom:18px}
+.step h3{margin:0 0 6px}.step p{margin:0;color:#b9ccca;font-size:.95rem}
+.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.shot{margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:9px;box-shadow:0 9px 28px rgba(7,35,37,.06);cursor:zoom-in}
+.shot img{display:block;width:100%;height:390px;object-fit:cover;object-position:top;border-radius:14px;background:#0b1718}
+.shot figcaption{padding:11px 6px 4px;font-weight:800;font-size:.93rem}
+.download-wrap{background:linear-gradient(135deg,#073f3d,#092427);border-radius:32px;padding:44px;color:#fff;box-shadow:var(--shadow)}
+.download-wrap p{color:#bdd0cf}
+.downloads{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.download{background:#fff;color:var(--ink);border-radius:20px;padding:25px}
+.download h3{margin:0 0 5px}.download p{color:var(--muted);margin:0}
+.download .btn{margin-top:16px}
+.notice{margin-top:18px;background:#fff8e1;border:1px solid #efd37a;color:#5f542f;border-radius:18px;padding:22px}
+.notice h3{margin-top:0;color:#4f461f}
+.info{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.info div{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px}
+.info strong{display:block;margin-bottom:4px}.info span{color:var(--muted)}
+footer{padding:35px 0;color:#657575;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(2,13,15,.84);display:none;align-items:center;justify-content:center;padding:25px;z-index:100}
+.modal.open{display:flex}
+.modal img{max-height:92vh;max-width:min(520px,94vw);border-radius:18px;box-shadow:0 20px 70px rgba(0,0,0,.4)}
+.modal button{position:fixed;right:22px;top:18px;border:0;background:#fff;color:#073f3d;width:44px;height:44px;border-radius:50%;font-size:25px;cursor:pointer}
+@media(max-width:980px){
+ .hero-grid{grid-template-columns:1fr}.hero-art{order:-1}.hero-art .device{width:min(360px,82%)}
+ .features{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}
+ .gallery{grid-template-columns:repeat(3,1fr)}.shot img{height:350px}.info{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+ .navlinks{display:none}.nav{min-height:66px}.navcta{padding:9px 12px}
+ .hero{padding:55px 0}.hero-grid{gap:28px}h1{letter-spacing:-1px}
+ section{padding:60px 0}.features,.steps,.downloads,.info{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,1fr)}.shot img{height:330px}
+ .download-wrap{padding:28px 20px;border-radius:24px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#inicio" aria-label="TERRYGES">
+   <img src="assets/branding/terryges_logo.png" alt="Logo TERRYGES"><span>TERRYGES</span>
+  </a>
+  <nav class="navlinks" aria-label="Navegación">
+   <a href="#funciones">Funciones</a><a href="#proceso">Flujo</a><a href="#capturas">Capturas</a><a href="#descargas">Descargas</a>
+  </nav>
+  <a class="navcta" href="#descargas">Obtener V1.1.0</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="container hero-grid">
+  <div>
+   <span class="kicker"><span class="dot"></span> TERRYGES V1.1.0 · Plataforma de gestión territorial</span>
+   <h1>Todo tu territorio,<br><em>organizado.</em></h1>
+   <p class="lead">TERRYGES centraliza la consulta, asignación y operación de territorios. Una experiencia pensada para trabajar con ciudades, sectores, divisiones, mapas y solicitudes desde una sola aplicación.</p>
+   <div class="actions">
+    <a class="btn primary" href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes.apk">📱 Descargar Android</a>
+    <a class="btn light" href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes-Setup-1.1.0.exe">🖥️ Descargar Windows</a>
+   </div>
+  </div>
+  <div class="hero-art">
+   <div class="device"><img src="assets/capturas/03-mapa.jpg" alt="TERRYGES mostrando el mapa y los territorios"></div>
+  </div>
+ </div>
+</section>
+
+<section id="funciones">
+ <div class="container">
+  <div class="section-title"><div class="eyebrow">La plataforma</div><h2>Herramientas para el trabajo territorial</h2><p>La interfaz de TERRYGES está organizada para que cada usuario encuentre rápidamente lo que necesita según sus permisos.</p></div>
+  <div class="features">
+   <article class="card"><div class="ico">🗺️</div><h3>Mapa territorial</h3><p>Visualiza los territorios y sus coordenadas con una interfaz orientada al trabajo de campo.</p></article>
+   <article class="card"><div class="ico">📍</div><h3>Territorios</h3><p>Consulta ciudades, sectores y territorios con estados claramente identificados.</p></article>
+   <article class="card"><div class="ico">📋</div><h3>Solicitudes</h3><p>Realiza y administra solicitudes de territorio con seguimiento del estado correspondiente.</p></article>
+   <article class="card"><div class="ico">👤</div><h3>Mis territorios</h3><p>Accede directamente a los territorios que han sido asignados a cada usuario.</p></article>
+   <article class="card"><div class="ico">⚙️</div><h3>Gestión</h3><p>Las funciones administrativas se concentran en el módulo de Gestión según el rol autorizado.</p></article>
+   <article class="card"><div class="ico">🔄</div><h3>Sincronización</h3><p>Trabajo integrado con la infraestructura central para mantener la información actualizada.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="workflow" id="proceso">
+ <div class="container">
+  <div class="section-title"><div class="eyebrow">Flujo de trabajo</div><h2>De la solicitud a la asignación</h2><p>El flujo mantiene separados los territorios disponibles, las solicitudes pendientes y los territorios asignados.</p></div>
+  <div class="steps">
+   <div class="step"><b>1</b><h3>Consultar</h3><p>Explora territorios disponibles desde Territorios o el Mapa.</p></div>
+   <div class="step"><b>2</b><h3>Solicitar</h3><p>Envía una solicitud para el territorio que corresponde.</p></div>
+   <div class="step"><b>3</b><h3>Gestionar</h3><p>El usuario autorizado revisa y aprueba o rechaza la solicitud.</p></div>
+   <div class="step"><b>4</b><h3>Asignar</h3><p>Una vez aprobado, el territorio aparece como asignado al usuario.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="capturas">
+ <div class="container">
+  <div class="section-title"><div class="eyebrow">Interfaz real</div><h2>Conoce TERRYGES por dentro</h2><p>Estas son capturas reales de la aplicación desarrollada. Haz clic sobre cualquiera para verla en tamaño completo.</p></div>
+  <div class="gallery">
+   <figure class="shot" data-full="assets/capturas/01-login.jpg" data-title="Inicio de sesión">
+    <img src="assets/capturas/01-login.jpg" alt="Inicio de sesión — TERRYGES" loading="lazy">
+    <figcaption>Inicio de sesión</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/02-inicio.jpg" data-title="Panel principal">
+    <img src="assets/capturas/02-inicio.jpg" alt="Panel principal — TERRYGES" loading="lazy">
+    <figcaption>Panel principal</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/03-mapa.jpg" data-title="Mapa de territorios">
+    <img src="assets/capturas/03-mapa.jpg" alt="Mapa de territorios — TERRYGES" loading="lazy">
+    <figcaption>Mapa de territorios</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/04-territorios.jpg" data-title="Territorios">
+    <img src="assets/capturas/04-territorios.jpg" alt="Territorios — TERRYGES" loading="lazy">
+    <figcaption>Territorios</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/05-gestion.jpg" data-title="Gestión administrativa">
+    <img src="assets/capturas/05-gestion.jpg" alt="Gestión administrativa — TERRYGES" loading="lazy">
+    <figcaption>Gestión administrativa</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/06-solicitudes.jpg" data-title="Mis solicitudes">
+    <img src="assets/capturas/06-solicitudes.jpg" alt="Mis solicitudes — TERRYGES" loading="lazy">
+    <figcaption>Mis solicitudes</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/07-atender-solicitudes.jpg" data-title="Atender solicitudes">
+    <img src="assets/capturas/07-atender-solicitudes.jpg" alt="Atender solicitudes — TERRYGES" loading="lazy">
+    <figcaption>Atender solicitudes</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/08-mis-territorios.jpg" data-title="Mis territorios">
+    <img src="assets/capturas/08-mis-territorios.jpg" alt="Mis territorios — TERRYGES" loading="lazy">
+    <figcaption>Mis territorios</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/09-configuracion.jpg" data-title="Configuración">
+    <img src="assets/capturas/09-configuracion.jpg" alt="Configuración — TERRYGES" loading="lazy">
+    <figcaption>Configuración</figcaption>
+   </figure>
+   <figure class="shot" data-full="assets/capturas/10-carga.jpg" data-title="Carga y sincronización">
+    <img src="assets/capturas/10-carga.jpg" alt="Carga y sincronización — TERRYGES" loading="lazy">
+    <figcaption>Carga y sincronización</figcaption>
+   </figure>
+  </div>
+ </div>
+</section>
+
+<section id="descargas">
+ <div class="container">
+  <div class="download-wrap">
+   <div class="section-title" style="margin-bottom:0"><div class="eyebrow" style="color:#73d5cf">Descargas oficiales</div><h2>TERRYGES V1.1.0</h2><p>Selecciona la plataforma que vas a utilizar. Los botones llevan directamente a los archivos publicados en la versión 1.1.0.</p></div>
+   <div class="downloads">
+    <article class="download">
+     <h3>📱 Android</h3><p>Aplicación en formato APK para dispositivos Android.</p>
+     <a class="btn primary" href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes.apk">Descargar TerryGes.apk</a>
+    </article>
+    <article class="download">
+     <h3>🖥️ Windows</h3><p>Instalador de escritorio para Windows.</p>
+     <a class="btn primary" href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes-Setup-1.1.0.exe">Descargar instalador Windows</a>
+    </article>
+   </div>
+   <div class="notice">
+    <h3>⚠️ Instalación de Android fuera de Google Play</h3>
+    <p>Al instalar el APK desde una fuente externa, Android o Google Play Protect puede mostrar una advertencia porque la aplicación no procede de Google Play. Esa advertencia, por sí sola, no demuestra que la aplicación contenga malware. Instala únicamente desde la fuente oficial de distribución y verifica que la versión sea la indicada.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="section-title"><div class="eyebrow">Información</div><h2>Detalles de la versión</h2></div>
+  <div class="info">
+   <div><strong>Aplicación</strong><span>TERRYGES</span></div>
+   <div><strong>Versión</strong><span>1.1.0</span></div>
+   <div><strong>Plataformas</strong><span>Android · Windows · Web</span></div>
+   <div><strong>Distribución</strong><span>Usuarios autorizados</span></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">© 2026 TERRYGES · V1.1.0 · Gestión de Territorios</div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+ <button id="close" aria-label="Cerrar">×</button>
+ <img id="modalImg" src="" alt="">
+</div>
+<script>
+const modal=document.getElementById('modal'), modalImg=document.getElementById('modalImg');
+document.querySelectorAll('.shot').forEach(card=>{
+ card.addEventListener('click',()=>{
+  modalImg.src=card.dataset.full;
+  modalImg.alt=card.dataset.title;
+  modal.classList.add('open');
+ });
+});
+function closeModal(){modal.classList.remove('open');modalImg.src='';}
+document.getElementById('close').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body>
+</html>
