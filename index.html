@@ -35,7 +35,7 @@
 >
 
 <title>
-  TERRYGES V1.1 — Gestión de Territorios
+TERRYGES V1.1 — Gestión de Territorios
 </title>
 
 <link
@@ -54,8 +54,10 @@
 
  --ink:#092427;
  --muted:#5e7172;
- --paper:#fff;
+
+ --paper:#ffffff;
  --soft:#f3f8f7;
+
  --line:#d9e7e5;
 
  --teal:#087d78;
@@ -82,11 +84,9 @@
  box-sizing:border-box;
 }
 
-
 html{
  scroll-behavior:smooth;
 }
-
 
 body{
 
@@ -105,7 +105,6 @@ body{
 
 }
 
-
 a{
 
  color:inherit;
@@ -114,13 +113,16 @@ a{
 
 }
 
-
 img{
 
  max-width:100%;
 
 }
 
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .container{
 
@@ -144,16 +146,14 @@ header{
  z-index:50;
 
  background:
-   rgba(255,255,255,.94);
+   rgba(255,255,255,.96);
 
- backdrop-filter:
-   blur(14px);
+ backdrop-filter:blur(14px);
 
  border-bottom:
    1px solid var(--line);
 
 }
-
 
 .nav{
 
@@ -169,7 +169,6 @@ header{
 
 }
 
-
 .brand{
 
  display:flex;
@@ -181,7 +180,6 @@ header{
  font-weight:800;
 
 }
-
 
 .brand img{
 
@@ -195,7 +193,6 @@ header{
 
 }
 
-
 .brand span{
 
  font-size:1.18rem;
@@ -203,7 +200,6 @@ header{
  letter-spacing:.5px;
 
 }
-
 
 .navlinks{
 
@@ -217,6 +213,11 @@ header{
 
 }
 
+.navlinks a{
+
+ transition:.2s;
+
+}
 
 .navlinks a:hover{
 
@@ -224,10 +225,13 @@ header{
 
 }
 
-
 .navcta{
 
  display:inline-flex;
+
+ align-items:center;
+
+ justify-content:center;
 
  padding:10px 16px;
 
@@ -236,6 +240,18 @@ header{
  background:var(--teal);
 
  color:#fff !important;
+
+ font-weight:800;
+
+ transition:.2s;
+
+}
+
+.navcta:hover{
+
+ background:var(--teal2);
+
+ transform:translateY(-1px);
 
 }
 
@@ -268,12 +284,11 @@ header{
 
    linear-gradient(
      180deg,
-     #fff 0%,
+     #ffffff 0%,
      #f2f8f7 100%
    );
 
 }
-
 
 .hero:after{
 
@@ -295,7 +310,6 @@ header{
 
 }
 
-
 .hero-grid{
 
  display:grid;
@@ -313,7 +327,6 @@ header{
  z-index:1;
 
 }
-
 
 .kicker{
 
@@ -337,7 +350,6 @@ header{
 
 }
 
-
 .dot{
 
  width:8px;
@@ -352,11 +364,14 @@ header{
 
 }
 
-
 h1{
 
  font-size:
-   clamp(2.6rem,5vw,5rem);
+   clamp(
+     2.6rem,
+     5vw,
+     5rem
+   );
 
  line-height:1.02;
 
@@ -366,7 +381,6 @@ h1{
 
 }
 
-
 h1 em{
 
  font-style:normal;
@@ -374,7 +388,6 @@ h1 em{
  color:var(--teal);
 
 }
-
 
 .lead{
 
@@ -399,10 +412,7 @@ h1 em{
 
  align-items:center;
 
- width:100%;
-
 }
-
 
 .hero-art .device{
 
@@ -410,7 +420,8 @@ h1 em{
 
  background:#fff;
 
- border:1px solid var(--line);
+ border:
+   1px solid var(--line);
 
  border-radius:30px;
 
@@ -419,7 +430,6 @@ h1 em{
  box-shadow:var(--shadow);
 
 }
-
 
 .hero-art .device img{
 
@@ -448,7 +458,6 @@ section{
 
 }
 
-
 .section-title{
 
  max-width:760px;
@@ -456,7 +465,6 @@ section{
  margin-bottom:34px;
 
 }
-
 
 .section-title .eyebrow{
 
@@ -472,18 +480,20 @@ section{
 
 }
 
-
 h2{
 
  font-size:
-   clamp(2rem,3.5vw,3rem);
+   clamp(
+     2rem,
+     3.5vw,
+     3rem
+   );
 
  line-height:1.1;
 
  margin:8px 0 12px;
 
 }
-
 
 .section-title p{
 
@@ -509,22 +519,34 @@ h2{
 
 }
 
-
 .card{
 
  background:#fff;
 
- border:1px solid var(--line);
+ border:
+   1px solid var(--line);
 
  border-radius:var(--radius);
 
  padding:26px;
 
  box-shadow:
-   0 8px 30px rgba(7,35,37,.045);
+   0 8px 30px
+   rgba(7,35,37,.045);
+
+ transition:.2s;
 
 }
 
+.card:hover{
+
+ transform:translateY(-3px);
+
+ box-shadow:
+   0 14px 35px
+   rgba(7,35,37,.08);
+
+}
 
 .card .ico{
 
@@ -534,13 +556,11 @@ h2{
 
 }
 
-
 .card h3{
 
  margin:0 0 7px;
 
 }
-
 
 .card p{
 
@@ -563,20 +583,17 @@ h2{
 
 }
 
-
 .workflow .section-title p{
 
  color:#b9ccca;
 
 }
 
-
 .workflow .section-title .eyebrow{
 
  color:#73d5cf;
 
 }
-
 
 .steps{
 
@@ -589,11 +606,11 @@ h2{
 
 }
 
-
 .step{
 
  border:
-   1px solid rgba(255,255,255,.13);
+   1px solid
+   rgba(255,255,255,.13);
 
  background:
    rgba(255,255,255,.055);
@@ -603,7 +620,6 @@ h2{
  padding:22px;
 
 }
-
 
 .step b{
 
@@ -625,13 +641,11 @@ h2{
 
 }
 
-
 .step h3{
 
  margin:0 0 6px;
 
 }
-
 
 .step p{
 
@@ -659,41 +673,38 @@ h2{
 
 }
 
-
 .shot{
 
  margin:0;
 
  background:#fff;
 
- border:1px solid var(--line);
+ border:
+   1px solid var(--line);
 
  border-radius:20px;
 
  padding:9px;
 
  box-shadow:
-   0 9px 28px rgba(7,35,37,.06);
+   0 9px 28px
+   rgba(7,35,37,.06);
 
  cursor:zoom-in;
 
- transition:
-   transform .2s,
-   box-shadow .2s;
+ transition:.2s;
 
 }
-
 
 .shot:hover{
 
- transform:
-   translateY(-3px);
+ transform:translateY(-3px);
 
  box-shadow:
-   0 14px 35px rgba(7,35,37,.10);
+   0 14px 35px
+   rgba(7,35,37,.10);
 
 }
-
 
 .shot img{
 
@@ -712,7 +723,6 @@ h2{
  background:#0b1718;
 
 }
-
 
 .shot figcaption{
 
@@ -748,33 +758,30 @@ h2{
 
 }
 
-
 .download-wrap .section-title .eyebrow{
 
  color:#73d5cf;
 
 }
 
-
-.download-wrap p{
+.download-wrap .section-title p{
 
  color:#bdd0cf;
 
 }
 
-
 .downloads{
 
  display:grid;
 
- grid-template-columns:1fr;
+ grid-template-columns:
+   repeat(2,1fr);
 
  gap:16px;
 
  margin-top:24px;
 
 }
-
 
 .download{
 
@@ -786,15 +793,17 @@ h2{
 
  padding:25px;
 
-}
+ border:
+   1px solid
+   rgba(255,255,255,.15);
 
+}
 
 .download h3{
 
  margin:0 0 5px;
 
 }
-
 
 .download p{
 
@@ -803,7 +812,6 @@ h2{
  margin:0;
 
 }
-
 
 .download .btn{
 
@@ -832,12 +840,14 @@ h2{
 
  font-weight:800;
 
- border:1px solid transparent;
+ border:
+   1px solid transparent;
 
  transition:.2s;
 
-}
+ cursor:pointer;
 
+}
 
 .btn.primary{
 
@@ -846,17 +856,16 @@ h2{
  color:#fff;
 
  box-shadow:
-   0 10px 25px rgba(8,125,120,.18);
+   0 10px 25px
+   rgba(8,125,120,.18);
 
 }
-
 
 .btn.primary:hover{
 
  background:var(--teal2);
 
- transform:
-   translateY(-2px);
+ transform:translateY(-2px);
 
 }
 
@@ -869,24 +878,46 @@ h2{
 
  margin-top:18px;
 
- background:#fff8e1;
+ background:#fff8d6;
 
- border:1px solid #efd37a;
+ border:
+   1px solid #d9b83f;
 
- color:#5f542f;
+ color:#332f16;
 
  border-radius:18px;
 
  padding:22px;
 
-}
+ box-shadow:
+   0 8px 24px
+   rgba(80,65,10,.08);
 
+}
 
 .notice h3{
 
  margin-top:0;
 
- color:#4f461f;
+ margin-bottom:10px;
+
+ color:#26230f;
+
+ font-weight:800;
+
+}
+
+.notice p{
+
+ color:#332f16;
+
+ margin:8px 0;
+
+}
+
+.notice strong{
+
+ color:#171507;
 
 }
 
@@ -906,19 +937,18 @@ h2{
 
 }
 
-
 .info div{
 
  background:#fff;
 
- border:1px solid var(--line);
+ border:
+   1px solid var(--line);
 
  border-radius:17px;
 
  padding:18px;
 
 }
-
 
 .info strong{
 
@@ -927,7 +957,6 @@ h2{
  margin-bottom:4px;
 
 }
-
 
 .info span{
 
@@ -955,7 +984,6 @@ footer{
 
 }
 
-
 .footer-main{
 
  font-weight:800;
@@ -965,7 +993,6 @@ footer{
  margin-bottom:10px;
 
 }
-
 
 .footer-links{
 
@@ -981,13 +1008,11 @@ footer{
 
 }
 
-
 .footer-links a:hover{
 
  color:var(--teal);
 
 }
-
 
 .footer-small{
 
@@ -1027,27 +1052,28 @@ footer{
 
 }
 
-
 .modal.open{
 
  display:flex;
 
 }
 
-
 .modal img{
 
  max-height:92vh;
 
- max-width:min(1100px,94vw);
+ max-width:min(
+   1100px,
+   94vw
+ );
 
  border-radius:18px;
 
  box-shadow:
-   0 20px 70px rgba(0,0,0,.4);
+   0 20px 70px
+   rgba(0,0,0,.4);
 
 }
-
 
 .modal button{
 
@@ -1073,6 +1099,8 @@ footer{
 
  cursor:pointer;
 
+ line-height:1;
+
 }
 
 
@@ -1096,7 +1124,10 @@ footer{
 
  .hero-art .device{
 
-  width:min(700px,92%);
+  width:min(
+    700px,
+    92%
+  );
 
  }
 
@@ -1138,7 +1169,7 @@ footer{
 
 
 /* =========================================================
-   RESPONSIVE — MÓVIL
+   RESPONSIVE — MOBILE
 ========================================================= */
 
 @media(max-width:680px){
@@ -1158,6 +1189,8 @@ footer{
  .navcta{
 
   padding:9px 12px;
+
+  font-size:.88rem;
 
  }
 
@@ -1187,7 +1220,8 @@ footer{
 
  .features,
  .steps,
- .info{
+ .info,
+ .downloads{
 
   grid-template-columns:1fr;
 
@@ -1222,14 +1256,42 @@ footer{
 
  }
 
+ .notice{
+
+  padding:18px;
+
+ }
+
 }
 
 
 /* =========================================================
-   RESPONSIVE — TELÉFONOS PEQUEÑOS
+   MOBILE PEQUEÑO
 ========================================================= */
 
-@media(max-width:420px){
+@media(max-width:430px){
+
+ .brand span{
+
+  font-size:1rem;
+
+ }
+
+ .brand img{
+
+  width:44px;
+
+  height:44px;
+
+ }
+
+ .navcta{
+
+  font-size:.8rem;
+
+  padding:8px 10px;
+
+ }
 
  .gallery{
 
@@ -1243,35 +1305,25 @@ footer{
 
   max-height:none;
 
- }
-
- .brand span{
-
-  font-size:1rem;
+  object-fit:contain;
 
  }
 
- .navcta{
+}
 
-  font-size:.85rem;
 
- }
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
 
- .hero-art .device{
+a:focus-visible,
+button:focus-visible{
 
-  width:100%;
+ outline:
+   3px solid
+   rgba(19,153,213,.55);
 
-  padding:8px;
-
-  border-radius:22px;
-
- }
-
- .hero-art .device img{
-
-  border-radius:15px;
-
- }
+ outline-offset:3px;
 
 }
 
@@ -1285,7 +1337,7 @@ footer{
 
 <!-- =======================================================
      HEADER
-======================================================= -->
+======================================================== -->
 
 <header>
 
@@ -1299,7 +1351,7 @@ footer{
   >
 
    <img
-    src="assets/branding/terryges_logo.png?v=2"
+    src="assets/branding/terryges_logo.png?v=3"
     alt="Logo TERRYGES"
    >
 
@@ -1348,16 +1400,12 @@ footer{
 
 
 
-<!-- =======================================================
-     MAIN
-======================================================= -->
-
 <main>
 
 
 <!-- =======================================================
      HERO
-======================================================= -->
+======================================================== -->
 
 <section
  class="hero"
@@ -1385,9 +1433,7 @@ footer{
 
     <br>
 
-    <em>
-     organizado.
-    </em>
+    <em>organizado.</em>
 
    </h1>
 
@@ -1408,8 +1454,6 @@ footer{
 
   <!-- =====================================================
        BANNER PRINCIPAL
-       ARCHIVO:
-       assets/branding/banner-inicial.png
   ====================================================== -->
 
   <div class="hero-art">
@@ -1417,7 +1461,7 @@ footer{
    <div class="device">
 
     <img
-     src="assets/branding/banner-inicial.png?v=2"
+     src="assets/branding/banner-inicial.png?v=3"
      alt="TERRYGES — Aplicación para gestión territorial"
     >
 
@@ -1434,7 +1478,7 @@ footer{
 
 <!-- =======================================================
      FUNCIONES
-======================================================= -->
+======================================================== -->
 
 <section id="funciones">
 
@@ -1452,11 +1496,9 @@ footer{
    </h2>
 
    <p>
-
     La interfaz de TERRYGES está organizada para que
     cada usuario encuentre rápidamente lo que necesita
     según sus permisos.
-
    </p>
 
   </div>
@@ -1477,10 +1519,8 @@ footer{
     </h3>
 
     <p>
-
      Visualiza los territorios y sus coordenadas
      con una interfaz orientada al trabajo de campo.
-
     </p>
 
    </article>
@@ -1498,10 +1538,8 @@ footer{
     </h3>
 
     <p>
-
      Consulta ciudades, sectores y territorios
      con estados claramente identificados.
-
     </p>
 
    </article>
@@ -1519,10 +1557,8 @@ footer{
     </h3>
 
     <p>
-
      Realiza y administra solicitudes de territorio
      con seguimiento del estado correspondiente.
-
     </p>
 
    </article>
@@ -1540,10 +1576,8 @@ footer{
     </h3>
 
     <p>
-
      Accede directamente a los territorios
      que han sido asignados a cada usuario.
-
     </p>
 
    </article>
@@ -1561,10 +1595,8 @@ footer{
     </h3>
 
     <p>
-
      Las funciones administrativas se concentran
      en el módulo de Gestión según el rol autorizado.
-
     </p>
 
    </article>
@@ -1582,10 +1614,8 @@ footer{
     </h3>
 
     <p>
-
      Trabajo integrado con la infraestructura central
      para mantener la información actualizada.
-
     </p>
 
    </article>
@@ -1601,7 +1631,7 @@ footer{
 
 <!-- =======================================================
      FLUJO
-======================================================= -->
+======================================================== -->
 
 <section
  class="workflow"
@@ -1622,11 +1652,9 @@ footer{
    </h2>
 
    <p>
-
     El flujo mantiene separados los territorios
     disponibles, las solicitudes pendientes
     y los territorios asignados.
-
    </p>
 
   </div>
@@ -1638,19 +1666,15 @@ footer{
 
    <div class="step">
 
-    <b>
-     1
-    </b>
+    <b>1</b>
 
     <h3>
      Consultar
     </h3>
 
     <p>
-
      Explora territorios disponibles
      desde Territorios o el Mapa.
-
     </p>
 
    </div>
@@ -1659,19 +1683,15 @@ footer{
 
    <div class="step">
 
-    <b>
-     2
-    </b>
+    <b>2</b>
 
     <h3>
      Solicitar
     </h3>
 
     <p>
-
      Envía una solicitud para
      el territorio que corresponde.
-
     </p>
 
    </div>
@@ -1680,19 +1700,15 @@ footer{
 
    <div class="step">
 
-    <b>
-     3
-    </b>
+    <b>3</b>
 
     <h3>
      Gestionar
     </h3>
 
     <p>
-
      El usuario autorizado revisa
      y aprueba o rechaza la solicitud.
-
     </p>
 
    </div>
@@ -1701,19 +1717,15 @@ footer{
 
    <div class="step">
 
-    <b>
-     4
-    </b>
+    <b>4</b>
 
     <h3>
      Asignar
     </h3>
 
     <p>
-
      Una vez aprobado, el territorio
      aparece como asignado al usuario.
-
     </p>
 
    </div>
@@ -1729,7 +1741,7 @@ footer{
 
 <!-- =======================================================
      CAPTURAS
-======================================================= -->
+======================================================== -->
 
 <section id="capturas">
 
@@ -1747,10 +1759,8 @@ footer{
    </h2>
 
    <p>
-
     Estas son capturas reales de la aplicación desarrollada.
     Haz clic sobre cualquiera para verla en tamaño completo.
-
    </p>
 
   </div>
@@ -1764,12 +1774,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/01-login.jpg?v=2"
+    data-full="assets/capturas/01-login.jpg?v=3"
     data-title="Inicio de sesión"
    >
 
     <img
-     src="assets/capturas/01-login.jpg?v=2"
+     src="assets/capturas/01-login.jpg?v=3"
      alt="Inicio de sesión — TERRYGES"
      loading="lazy"
     >
@@ -1786,12 +1796,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/02-inicio.jpg?v=2"
+    data-full="assets/capturas/02-inicio.jpg?v=3"
     data-title="Panel principal"
    >
 
     <img
-     src="assets/capturas/02-inicio.jpg?v=2"
+     src="assets/capturas/02-inicio.jpg?v=3"
      alt="Panel principal — TERRYGES"
      loading="lazy"
     >
@@ -1808,12 +1818,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/03-mapa.jpg?v=2"
+    data-full="assets/capturas/03-mapa.jpg?v=3"
     data-title="Mapa de territorios"
    >
 
     <img
-     src="assets/capturas/03-mapa.jpg?v=2"
+     src="assets/capturas/03-mapa.jpg?v=3"
      alt="Mapa de territorios — TERRYGES"
      loading="lazy"
     >
@@ -1830,12 +1840,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/04-territorios.jpg?v=2"
+    data-full="assets/capturas/04-territorios.jpg?v=3"
     data-title="Territorios"
    >
 
     <img
-     src="assets/capturas/04-territorios.jpg?v=2"
+     src="assets/capturas/04-territorios.jpg?v=3"
      alt="Territorios — TERRYGES"
      loading="lazy"
     >
@@ -1852,12 +1862,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/05-gestion.jpg?v=2"
+    data-full="assets/capturas/05-gestion.jpg?v=3"
     data-title="Gestión administrativa"
    >
 
     <img
-     src="assets/capturas/05-gestion.jpg?v=2"
+     src="assets/capturas/05-gestion.jpg?v=3"
      alt="Gestión administrativa — TERRYGES"
      loading="lazy"
     >
@@ -1874,12 +1884,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/06-solicitudes.jpg?v=2"
+    data-full="assets/capturas/06-solicitudes.jpg?v=3"
     data-title="Mis solicitudes"
    >
 
     <img
-     src="assets/capturas/06-solicitudes.jpg?v=2"
+     src="assets/capturas/06-solicitudes.jpg?v=3"
      alt="Mis solicitudes — TERRYGES"
      loading="lazy"
     >
@@ -1896,12 +1906,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/07-atender-solicitudes.jpg?v=2"
+    data-full="assets/capturas/07-atender-solicitudes.jpg?v=3"
     data-title="Atender solicitudes"
    >
 
     <img
-     src="assets/capturas/07-atender-solicitudes.jpg?v=2"
+     src="assets/capturas/07-atender-solicitudes.jpg?v=3"
      alt="Atender solicitudes — TERRYGES"
      loading="lazy"
     >
@@ -1918,12 +1928,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/08-mis-territorios.jpg?v=2"
+    data-full="assets/capturas/08-mis-territorios.jpg?v=3"
     data-title="Mis territorios"
    >
 
     <img
-     src="assets/capturas/08-mis-territorios.jpg?v=2"
+     src="assets/capturas/08-mis-territorios.jpg?v=3"
      alt="Mis territorios — TERRYGES"
      loading="lazy"
     >
@@ -1940,12 +1950,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/09-configuracion.jpg?v=2"
+    data-full="assets/capturas/09-configuracion.jpg?v=3"
     data-title="Configuración"
    >
 
     <img
-     src="assets/capturas/09-configuracion.jpg?v=2"
+     src="assets/capturas/09-configuracion.jpg?v=3"
      alt="Configuración — TERRYGES"
      loading="lazy"
     >
@@ -1962,12 +1972,12 @@ footer{
 
    <figure
     class="shot"
-    data-full="assets/capturas/10-carga.jpg?v=2"
+    data-full="assets/capturas/10-carga.jpg?v=3"
     data-title="Carga y sincronización"
    >
 
     <img
-     src="assets/capturas/10-carga.jpg?v=2"
+     src="assets/capturas/10-carga.jpg?v=3"
      alt="Carga y sincronización — TERRYGES"
      loading="lazy"
     >
@@ -1989,7 +1999,7 @@ footer{
 
 <!-- =======================================================
      DESCARGAS
-======================================================= -->
+======================================================== -->
 
 <section id="descargas">
 
@@ -2005,18 +2015,16 @@ footer{
    >
 
     <div class="eyebrow">
-     Descarga oficial
+     Descargas oficiales
     </div>
 
     <h2>
-     TERRYGES V1.1.0 para Android
+     TERRYGES V1.1.0
     </h2>
 
     <p>
-
-     Descarga la aplicación oficial de TERRYGES
-     para dispositivos Android.
-
+     Selecciona la plataforma que vas a utilizar.
+     Descarga la versión oficial de TERRYGES V1.1.0.
     </p>
 
    </div>
@@ -2026,6 +2034,10 @@ footer{
    <div class="downloads">
 
 
+    <!-- =================================================
+         ANDROID
+    ================================================== -->
+
     <article class="download">
 
      <h3>
@@ -2033,18 +2045,39 @@ footer{
      </h3>
 
      <p>
-
       Aplicación en formato APK para dispositivos Android.
-
      </p>
 
      <a
       class="btn primary"
       href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes.apk"
      >
-
       📱 Descargar TerryGes.apk
+     </a>
 
+    </article>
+
+
+
+    <!-- =================================================
+         WINDOWS
+    ================================================== -->
+
+    <article class="download">
+
+     <h3>
+      🖥️ Windows
+     </h3>
+
+     <p>
+      Aplicación de escritorio para equipos con Windows.
+     </p>
+
+     <a
+      class="btn primary"
+      href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes-Setup-1.1.0.exe"
+     >
+      🖥️ Descargar instalador Windows
      </a>
 
     </article>
@@ -2054,6 +2087,10 @@ footer{
 
 
 
+   <!-- =================================================
+        AVISO DE SEGURIDAD
+   ================================================== -->
+
    <div class="notice">
 
     <h3>
@@ -2061,21 +2098,17 @@ footer{
     </h3>
 
     <p>
-
      Al instalar el APK desde una fuente externa,
      Android o Google Play Protect puede mostrar
      una advertencia porque la aplicación no procede
      de Google Play.
-
     </p>
 
     <p>
-
      Esa advertencia, por sí sola, no demuestra que
      la aplicación contenga malware. Instala únicamente
      desde la fuente oficial de distribución y verifica
      que la versión sea la indicada.
-
     </p>
 
    </div>
@@ -2091,7 +2124,7 @@ footer{
 
 <!-- =======================================================
      INFORMACIÓN
-======================================================= -->
+======================================================== -->
 
 <section>
 
@@ -2183,7 +2216,7 @@ footer{
 
 <!-- =======================================================
      FOOTER
-======================================================= -->
+======================================================== -->
 
 <footer>
 
@@ -2265,8 +2298,8 @@ footer{
 
 
 <!-- =======================================================
-     MODAL
-======================================================= -->
+     MODAL DE CAPTURAS
+======================================================== -->
 
 <div
  class="modal"
@@ -2275,7 +2308,6 @@ footer{
  aria-modal="true"
  aria-label="Vista ampliada"
 >
-
 
  <button
   id="close"
@@ -2298,7 +2330,7 @@ footer{
 
 <!-- =======================================================
      JAVASCRIPT
-======================================================= -->
+======================================================== -->
 
 <script>
 
@@ -2312,41 +2344,44 @@ const closeButton =
  document.getElementById('close');
 
 
-/* =========================================================
+/* ========================================================
    ABRIR CAPTURA
-========================================================= */
+======================================================== */
 
 document
  .querySelectorAll('.shot')
  .forEach(card => {
 
-  card.addEventListener('click', () => {
+  card.addEventListener(
+   'click',
+   () => {
 
-   const image =
-    card.dataset.full;
+    const image =
+     card.dataset.full;
 
-   const title =
-    card.dataset.title;
+    const title =
+     card.dataset.title;
 
-   modalImg.src =
-    image;
+    modalImg.src =
+     image;
 
-   modalImg.alt =
-    title;
+    modalImg.alt =
+     title;
 
-   modal.classList.add('open');
+    modal.classList.add('open');
 
-   document.body.style.overflow =
-    'hidden';
+    document.body.style.overflow =
+     'hidden';
 
-  });
+   }
+  );
 
  });
 
 
-/* =========================================================
+/* ========================================================
    CERRAR MODAL
-========================================================= */
+======================================================== */
 
 function closeModal(){
 
@@ -2362,9 +2397,9 @@ function closeModal(){
 }
 
 
-/* =========================================================
+/* ========================================================
    BOTÓN CERRAR
-========================================================= */
+======================================================== */
 
 closeButton.addEventListener(
  'click',
@@ -2372,9 +2407,9 @@ closeButton.addEventListener(
 );
 
 
-/* =========================================================
-   CERRAR AL HACER CLIC FUERA
-========================================================= */
+/* ========================================================
+   CERRAR HACIENDO CLICK EN EL FONDO
+======================================================== */
 
 modal.addEventListener(
  'click',
@@ -2388,13 +2423,12 @@ modal.addEventListener(
 
   }
 
- }
-);
+ });
 
 
-/* =========================================================
-   CERRAR CON ESC
-========================================================= */
+/* ========================================================
+   CERRAR CON ESCAPE
+======================================================== */
 
 document.addEventListener(
  'keydown',
