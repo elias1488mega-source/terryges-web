@@ -12,10 +12,12 @@
 >
 
 <meta property="og:title" content="TERRYGES V1.1">
+
 <meta
   property="og:description"
   content="Gestión profesional de territorios, mapas, solicitudes y asignaciones."
 >
+
 <meta
   property="og:image"
   content="assets/branding/terryges_logo.png"
@@ -76,6 +78,7 @@ img{
  margin:auto;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -135,6 +138,7 @@ header{
  color:#fff!important;
 }
 
+
 /* =========================
    HERO
 ========================= */
@@ -142,7 +146,7 @@ header{
 .hero{
  overflow:hidden;
  position:relative;
- padding:84px 0 80px;
+ padding:78px 0 82px;
 
  background:
  radial-gradient(
@@ -178,9 +182,9 @@ header{
 
 .hero-grid{
  display:grid;
- grid-template-columns:1.05fr .95fr;
+ grid-template-columns:1fr 1.15fr;
  align-items:center;
- gap:65px;
+ gap:55px;
  position:relative;
  z-index:1;
 }
@@ -223,6 +227,7 @@ h1 em{
  max-width:680px;
 }
 
+
 /* =========================
    HERO BANNER
 ========================= */
@@ -230,10 +235,11 @@ h1 em{
 .hero-art{
  display:flex;
  justify-content:center;
+ align-items:center;
 }
 
 .hero-art .device{
- width:min(620px,100%);
+ width:min(700px,100%);
  background:#fff;
  border:1px solid var(--line);
  border-radius:30px;
@@ -245,8 +251,11 @@ h1 em{
  display:block;
  width:100%;
  height:auto;
+ max-height:520px;
+ object-fit:contain;
  border-radius:20px;
 }
+
 
 /* =========================
    SECTIONS
@@ -280,6 +289,7 @@ h2{
  font-size:1.05rem;
 }
 
+
 /* =========================
    FEATURES
 ========================= */
@@ -312,6 +322,7 @@ h2{
  color:var(--muted);
 }
 
+
 /* =========================
    WORKFLOW
 ========================= */
@@ -323,6 +334,10 @@ h2{
 
 .workflow .section-title p{
  color:#b9ccca;
+}
+
+.workflow .section-title .eyebrow{
+ color:#73d5cf;
 }
 
 .steps{
@@ -359,6 +374,7 @@ h2{
  font-size:.95rem;
 }
 
+
 /* =========================
    GALLERY
 ========================= */
@@ -377,6 +393,12 @@ h2{
  padding:9px;
  box-shadow:0 9px 28px rgba(7,35,37,.06);
  cursor:zoom-in;
+ transition:.2s;
+}
+
+.shot:hover{
+ transform:translateY(-3px);
+ box-shadow:0 14px 35px rgba(7,35,37,.10);
 }
 
 .shot img{
@@ -395,12 +417,14 @@ h2{
  font-size:.93rem;
 }
 
+
 /* =========================
    DOWNLOADS
 ========================= */
 
 .download-wrap{
- background:linear-gradient(
+ background:
+ linear-gradient(
    135deg,
    #073f3d,
    #092427
@@ -411,13 +435,17 @@ h2{
  box-shadow:var(--shadow);
 }
 
+.download-wrap .section-title .eyebrow{
+ color:#73d5cf;
+}
+
 .download-wrap p{
  color:#bdd0cf;
 }
 
 .downloads{
  display:grid;
- grid-template-columns:repeat(2,1fr);
+ grid-template-columns:1fr;
  gap:16px;
  margin-top:24px;
 }
@@ -441,6 +469,7 @@ h2{
 .download .btn{
  margin-top:16px;
 }
+
 
 /* =========================
    BUTTONS
@@ -469,15 +498,6 @@ h2{
  transform:translateY(-2px);
 }
 
-.btn.light{
- background:#fff;
- border-color:var(--line);
- color:var(--teal2);
-}
-
-.btn.light:hover{
- border-color:var(--teal);
-}
 
 /* =========================
    NOTICE
@@ -496,6 +516,7 @@ h2{
  margin-top:0;
  color:#4f461f;
 }
+
 
 /* =========================
    INFORMATION
@@ -522,6 +543,7 @@ h2{
 .info span{
  color:var(--muted);
 }
+
 
 /* =========================
    FOOTER
@@ -559,6 +581,7 @@ footer{
  max-width:850px;
  margin:12px auto 0;
 }
+
 
 /* =========================
    MODAL
@@ -599,6 +622,7 @@ footer{
  font-size:25px;
  cursor:pointer;
 }
+
 
 /* =========================
    RESPONSIVE
@@ -672,7 +696,6 @@ footer{
 
  .features,
  .steps,
- .downloads,
  .info{
   grid-template-columns:1fr;
  }
@@ -700,7 +723,9 @@ footer{
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -717,7 +742,7 @@ footer{
   >
 
    <img
-    src="assets/branding/terryges_logo.png"
+    src="assets/branding/terryges_logo.png?v=2"
     alt="Logo TERRYGES"
    >
 
@@ -725,23 +750,28 @@ footer{
 
   </a>
 
+
   <nav
    class="navlinks"
    aria-label="Navegación"
   >
 
    <a href="#funciones">Funciones</a>
+
    <a href="#proceso">Flujo</a>
+
    <a href="#capturas">Capturas</a>
+
    <a href="#descargas">Descargas</a>
 
   </nav>
+
 
   <a
    class="navcta"
    href="#descargas"
   >
-   Obtener V1.1.0
+   Descargar V1.1.0
   </a>
 
  </div>
@@ -749,7 +779,9 @@ footer{
 </header>
 
 
+
 <main>
+
 
 <!-- =========================
      HERO
@@ -762,46 +794,62 @@ footer{
 
  <div class="container hero-grid">
 
+
   <div>
 
    <span class="kicker">
+
     <span class="dot"></span>
+
     TERRYGES V1.1.0 · Plataforma de gestión territorial
+
    </span>
 
+
    <h1>
+
     Todo tu territorio,
+
     <br>
+
     <em>organizado.</em>
+
    </h1>
 
+
    <p class="lead">
+
     TERRYGES centraliza la consulta, asignación y operación
     de territorios. Una experiencia pensada para trabajar
     con ciudades, sectores, divisiones, mapas y solicitudes
     desde una sola aplicación.
+
    </p>
 
   </div>
 
 
-  <!-- NUEVO BANNER -->
+
+  <!-- BANNER PRINCIPAL -->
+
   <div class="hero-art">
 
    <div class="device">
 
     <img
-     src="assets/capturas/banner-inicial.png"
-     alt="TERRYGES — Banner principal de la aplicación"
+     src="assets/branding/banner-inicial.png?v=2"
+     alt="TERRYGES — Aplicación para gestión territorial"
     >
 
    </div>
 
   </div>
 
+
  </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -811,6 +859,7 @@ footer{
 <section id="funciones">
 
  <div class="container">
+
 
   <div class="section-title">
 
@@ -831,67 +880,105 @@ footer{
   </div>
 
 
+
   <div class="features">
 
+
    <article class="card">
+
     <div class="ico">🗺️</div>
+
     <h3>Mapa territorial</h3>
+
     <p>
      Visualiza los territorios y sus coordenadas
      con una interfaz orientada al trabajo de campo.
     </p>
+
    </article>
 
+
+
    <article class="card">
+
     <div class="ico">📍</div>
+
     <h3>Territorios</h3>
+
     <p>
      Consulta ciudades, sectores y territorios
      con estados claramente identificados.
     </p>
+
    </article>
 
+
+
    <article class="card">
+
     <div class="ico">📋</div>
+
     <h3>Solicitudes</h3>
+
     <p>
      Realiza y administra solicitudes de territorio
      con seguimiento del estado correspondiente.
     </p>
+
    </article>
 
+
+
    <article class="card">
+
     <div class="ico">👤</div>
+
     <h3>Mis territorios</h3>
+
     <p>
      Accede directamente a los territorios
      que han sido asignados a cada usuario.
     </p>
+
    </article>
 
+
+
    <article class="card">
+
     <div class="ico">⚙️</div>
+
     <h3>Gestión</h3>
+
     <p>
      Las funciones administrativas se concentran
      en el módulo de Gestión según el rol autorizado.
     </p>
+
    </article>
 
+
+
    <article class="card">
+
     <div class="ico">🔄</div>
+
     <h3>Sincronización</h3>
+
     <p>
      Trabajo integrado con la infraestructura central
      para mantener la información actualizada.
     </p>
+
    </article>
+
 
   </div>
 
  </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -905,12 +992,10 @@ footer{
 
  <div class="container">
 
+
   <div class="section-title">
 
-   <div
-    class="eyebrow"
-    style="color:#73d5cf"
-   >
+   <div class="eyebrow">
     Flujo de trabajo
    </div>
 
@@ -927,49 +1012,75 @@ footer{
   </div>
 
 
+
   <div class="steps">
 
+
    <div class="step">
+
     <b>1</b>
+
     <h3>Consultar</h3>
+
     <p>
      Explora territorios disponibles
      desde Territorios o el Mapa.
     </p>
+
    </div>
 
+
+
    <div class="step">
+
     <b>2</b>
+
     <h3>Solicitar</h3>
+
     <p>
      Envía una solicitud para
      el territorio que corresponde.
     </p>
+
    </div>
 
+
+
    <div class="step">
+
     <b>3</b>
+
     <h3>Gestionar</h3>
+
     <p>
      El usuario autorizado revisa
      y aprueba o rechaza la solicitud.
     </p>
+
    </div>
 
+
+
    <div class="step">
+
     <b>4</b>
+
     <h3>Asignar</h3>
+
     <p>
      Una vez aprobado, el territorio
      aparece como asignado al usuario.
     </p>
+
    </div>
+
 
   </div>
 
  </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -979,6 +1090,7 @@ footer{
 <section id="capturas">
 
  <div class="container">
+
 
   <div class="section-title">
 
@@ -998,17 +1110,18 @@ footer{
   </div>
 
 
+
   <div class="gallery">
 
 
    <figure
     class="shot"
-    data-full="assets/capturas/01-login.jpg"
+    data-full="assets/capturas/01-login.jpg?v=2"
     data-title="Inicio de sesión"
    >
 
     <img
-     src="assets/capturas/01-login.jpg"
+     src="assets/capturas/01-login.jpg?v=2"
      alt="Inicio de sesión — TERRYGES"
      loading="lazy"
     >
@@ -1020,14 +1133,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/02-inicio.jpg"
+    data-full="assets/capturas/02-inicio.jpg?v=2"
     data-title="Panel principal"
    >
 
     <img
-     src="assets/capturas/02-inicio.jpg"
+     src="assets/capturas/02-inicio.jpg?v=2"
      alt="Panel principal — TERRYGES"
      loading="lazy"
     >
@@ -1039,14 +1153,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/03-mapa.jpg"
+    data-full="assets/capturas/03-mapa.jpg?v=2"
     data-title="Mapa de territorios"
    >
 
     <img
-     src="assets/capturas/03-mapa.jpg"
+     src="assets/capturas/03-mapa.jpg?v=2"
      alt="Mapa de territorios — TERRYGES"
      loading="lazy"
     >
@@ -1058,14 +1173,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/04-territorios.jpg"
+    data-full="assets/capturas/04-territorios.jpg?v=2"
     data-title="Territorios"
    >
 
     <img
-     src="assets/capturas/04-territorios.jpg"
+     src="assets/capturas/04-territorios.jpg?v=2"
      alt="Territorios — TERRYGES"
      loading="lazy"
     >
@@ -1077,14 +1193,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/05-gestion.jpg"
+    data-full="assets/capturas/05-gestion.jpg?v=2"
     data-title="Gestión administrativa"
    >
 
     <img
-     src="assets/capturas/05-gestion.jpg"
+     src="assets/capturas/05-gestion.jpg?v=2"
      alt="Gestión administrativa — TERRYGES"
      loading="lazy"
     >
@@ -1096,14 +1213,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/06-solicitudes.jpg"
+    data-full="assets/capturas/06-solicitudes.jpg?v=2"
     data-title="Mis solicitudes"
    >
 
     <img
-     src="assets/capturas/06-solicitudes.jpg"
+     src="assets/capturas/06-solicitudes.jpg?v=2"
      alt="Mis solicitudes — TERRYGES"
      loading="lazy"
     >
@@ -1115,14 +1233,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/07-atender-solicitudes.jpg"
+    data-full="assets/capturas/07-atender-solicitudes.jpg?v=2"
     data-title="Atender solicitudes"
    >
 
     <img
-     src="assets/capturas/07-atender-solicitudes.jpg"
+     src="assets/capturas/07-atender-solicitudes.jpg?v=2"
      alt="Atender solicitudes — TERRYGES"
      loading="lazy"
     >
@@ -1134,14 +1253,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/08-mis-territorios.jpg"
+    data-full="assets/capturas/08-mis-territorios.jpg?v=2"
     data-title="Mis territorios"
    >
 
     <img
-     src="assets/capturas/08-mis-territorios.jpg"
+     src="assets/capturas/08-mis-territorios.jpg?v=2"
      alt="Mis territorios — TERRYGES"
      loading="lazy"
     >
@@ -1153,14 +1273,15 @@ footer{
    </figure>
 
 
+
    <figure
     class="shot"
-    data-full="assets/capturas/09-configuracion.jpg"
+    data-full="assets/capturas/09-configuracion.jpg?v=2"
     data-title="Configuración"
    >
 
     <img
-     src="assets/capturas/09-configuracion.jpg"
+     src="assets/capturas/09-configuracion.jpg?v=2"
      alt="Configuración — TERRYGES"
      loading="lazy"
     >
@@ -1172,16 +1293,17 @@ footer{
    </figure>
 
 
-   <!-- IMAGEN 10 CORREGIDA -->
+
+   <!-- IMAGEN 10 ACTUALIZADA -->
 
    <figure
     class="shot"
-    data-full="assets/capturas/10-carga.jpg"
+    data-full="assets/capturas/10-carga.jpg?v=2"
     data-title="Carga y sincronización"
    >
 
     <img
-     src="assets/capturas/10-carga.jpg"
+     src="assets/capturas/10-carga.jpg?v=2"
      alt="Carga y sincronización — TERRYGES"
      loading="lazy"
     >
@@ -1200,6 +1322,7 @@ footer{
 </section>
 
 
+
 <!-- =========================
      DESCARGAS
 ========================= -->
@@ -1208,37 +1331,34 @@ footer{
 
  <div class="container">
 
+
   <div class="download-wrap">
+
 
    <div
     class="section-title"
     style="margin-bottom:0"
    >
 
-    <div
-     class="eyebrow"
-     style="color:#73d5cf"
-    >
-     Descargas oficiales
+    <div class="eyebrow">
+     Descarga oficial
     </div>
 
     <h2>
-     TERRYGES V1.1.0
+     TERRYGES V1.1.0 para Android
     </h2>
 
     <p>
-     Selecciona la plataforma que vas a utilizar.
-     Los archivos corresponden a la versión oficial
-     publicada de TERRYGES V1.1.0.
+     Descarga la aplicación oficial de TERRYGES
+     para dispositivos Android.
     </p>
 
    </div>
 
 
+
    <div class="downloads">
 
-
-    <!-- ANDROID -->
 
     <article class="download">
 
@@ -1254,35 +1374,14 @@ footer{
       class="btn primary"
       href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes.apk"
      >
-      Descargar TerryGes.apk
-     </a>
-
-    </article>
-
-
-    <!-- WINDOWS -->
-
-    <article class="download">
-
-     <h3>
-      🖥️ Windows
-     </h3>
-
-     <p>
-      Instalador de escritorio para Windows.
-     </p>
-
-     <a
-      class="btn primary"
-      href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes-Setup-1.1.0.exe"
-     >
-      Descargar instalador Windows
+      📱 Descargar TerryGes.apk
      </a>
 
     </article>
 
 
    </div>
+
 
 
    <div class="notice">
@@ -1307,11 +1406,13 @@ footer{
 
    </div>
 
+
   </div>
 
  </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1321,6 +1422,7 @@ footer{
 <section>
 
  <div class="container">
+
 
   <div class="section-title">
 
@@ -1335,27 +1437,64 @@ footer{
   </div>
 
 
+
   <div class="info">
 
-   <div>
-    <strong>Aplicación</strong>
-    <span>TERRYGES</span>
-   </div>
 
    <div>
-    <strong>Versión</strong>
-    <span>1.1.0</span>
+
+    <strong>
+     Aplicación
+    </strong>
+
+    <span>
+     TERRYGES
+    </span>
+
    </div>
 
-   <div>
-    <strong>Plataformas</strong>
-    <span>Android · Windows · Web</span>
-   </div>
+
 
    <div>
-    <strong>Distribución</strong>
-    <span>Usuarios autorizados</span>
+
+    <strong>
+     Versión
+    </strong>
+
+    <span>
+     1.1.0
+    </span>
+
    </div>
+
+
+
+   <div>
+
+    <strong>
+     Plataformas
+    </strong>
+
+    <span>
+     Android · Windows · Web
+    </span>
+
+   </div>
+
+
+
+   <div>
+
+    <strong>
+     Distribución
+    </strong>
+
+    <span>
+     Usuarios autorizados
+    </span>
+
+   </div>
+
 
   </div>
 
@@ -1363,7 +1502,9 @@ footer{
 
 </section>
 
+
 </main>
+
 
 
 <!-- =========================
@@ -1374,13 +1515,16 @@ footer{
 
  <div class="container">
 
+
   <div class="footer-main">
    TERRYGES V1.1.0
   </div>
 
+
   <div>
    © 2026 TERRYGES · Todos los derechos reservados
   </div>
+
 
   <div class="footer-links">
 
@@ -1406,6 +1550,7 @@ footer{
 
   </div>
 
+
   <div
    class="footer-small"
    id="seguridad"
@@ -1415,9 +1560,7 @@ footer{
     Desarrollado por Samuel Meneses
    </strong>
 
-   ·
-
-   Todos los derechos reservados.
+   · Todos los derechos reservados.
 
    <br>
 
@@ -1434,9 +1577,11 @@ footer{
 
   </div>
 
+
  </div>
 
 </footer>
+
 
 
 <!-- =========================
@@ -1458,6 +1603,7 @@ footer{
   ×
  </button>
 
+
  <img
   id="modalImg"
   src=""
@@ -1465,6 +1611,7 @@ footer{
  >
 
 </div>
+
 
 
 <script>
@@ -1525,8 +1672,7 @@ modal.addEventListener(
 
   }
 
- }
-);
+ });
 
 
 document.addEventListener(
@@ -1539,8 +1685,7 @@ document.addEventListener(
 
   }
 
- }
-);
+ );
 
 </script>
 
