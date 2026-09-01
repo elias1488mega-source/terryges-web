@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="theme-color" content="#087d78">
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1"
+>
+
+<meta
+  name="theme-color"
+  content="#087d78"
+>
 
 <meta
   name="description"
   content="TERRYGES V1.1 — Plataforma profesional para gestión de territorios."
 >
 
-<meta property="og:title" content="TERRYGES V1.1">
+<meta
+  property="og:title"
+  content="TERRYGES V1.1"
+>
 
 <meta
   property="og:description"
@@ -23,7 +34,9 @@
   content="assets/branding/terryges_logo.png"
 >
 
-<title>TERRYGES V1.1 — Gestión de Territorios</title>
+<title>
+  TERRYGES V1.1 — Gestión de Territorios
+</title>
 
 <link
   rel="icon"
@@ -33,707 +46,1251 @@
 
 <style>
 
+/* =========================================================
+   VARIABLES
+========================================================= */
+
 :root{
+
  --ink:#092427;
  --muted:#5e7172;
  --paper:#fff;
  --soft:#f3f8f7;
  --line:#d9e7e5;
+
  --teal:#087d78;
  --teal2:#075e5a;
+
  --blue:#1399d5;
  --green:#48c51e;
+
  --dark:#071719;
- --shadow:0 18px 55px rgba(7,35,37,.11);
+
+ --shadow:
+   0 18px 55px rgba(7,35,37,.11);
+
  --radius:24px;
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
  box-sizing:border-box;
 }
 
+
 html{
  scroll-behavior:smooth;
 }
 
+
 body{
+
  margin:0;
- font-family:Arial,Helvetica,sans-serif;
+
+ font-family:
+   Arial,
+   Helvetica,
+   sans-serif;
+
  color:var(--ink);
+
  background:var(--soft);
+
  line-height:1.6;
+
 }
+
 
 a{
+
  color:inherit;
+
  text-decoration:none;
+
 }
+
 
 img{
+
  max-width:100%;
+
 }
+
 
 .container{
+
  width:min(1180px,92%);
+
  margin:auto;
+
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 header{
+
  position:sticky;
+
  top:0;
+
  z-index:50;
- background:rgba(255,255,255,.94);
- backdrop-filter:blur(14px);
- border-bottom:1px solid var(--line);
+
+ background:
+   rgba(255,255,255,.94);
+
+ backdrop-filter:
+   blur(14px);
+
+ border-bottom:
+   1px solid var(--line);
+
 }
+
 
 .nav{
+
  min-height:74px;
+
  display:flex;
+
  align-items:center;
+
  justify-content:space-between;
+
  gap:24px;
+
 }
+
 
 .brand{
+
  display:flex;
+
  align-items:center;
+
  gap:12px;
+
  font-weight:800;
+
 }
+
 
 .brand img{
+
  width:50px;
+
  height:50px;
+
  object-fit:contain;
+
  border-radius:14px;
+
 }
+
 
 .brand span{
+
  font-size:1.18rem;
+
  letter-spacing:.5px;
+
 }
+
 
 .navlinks{
+
  display:flex;
+
  gap:24px;
+
  font-weight:700;
+
  color:#536667;
+
 }
+
 
 .navlinks a:hover{
+
  color:var(--teal);
+
 }
+
 
 .navcta{
+
  display:inline-flex;
+
  padding:10px 16px;
+
  border-radius:12px;
+
  background:var(--teal);
- color:#fff!important;
+
+ color:#fff !important;
+
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
+
  overflow:hidden;
+
  position:relative;
+
  padding:78px 0 82px;
 
  background:
- radial-gradient(
-   circle at 8% 20%,
-   rgba(19,153,213,.14),
-   transparent 28%
- ),
- radial-gradient(
-   circle at 88% 12%,
-   rgba(72,197,30,.14),
-   transparent 25%
- ),
- linear-gradient(
-   180deg,
-   #fff 0%,
-   #f2f8f7 100%
- );
+
+   radial-gradient(
+     circle at 8% 20%,
+     rgba(19,153,213,.14),
+     transparent 28%
+   ),
+
+   radial-gradient(
+     circle at 88% 12%,
+     rgba(72,197,30,.14),
+     transparent 25%
+   ),
+
+   linear-gradient(
+     180deg,
+     #fff 0%,
+     #f2f8f7 100%
+   );
+
 }
 
+
 .hero:after{
+
  content:"";
+
  position:absolute;
+
  inset:auto -10% -180px;
+
  height:360px;
 
  background:
- radial-gradient(
-   ellipse,
-   rgba(8,125,120,.09),
-   transparent 65%
- );
+
+   radial-gradient(
+     ellipse,
+     rgba(8,125,120,.09),
+     transparent 65%
+   );
+
 }
+
 
 .hero-grid{
+
  display:grid;
- grid-template-columns:1fr 1.15fr;
+
+ grid-template-columns:
+   1fr
+   1.15fr;
+
  align-items:center;
+
  gap:55px;
+
  position:relative;
+
  z-index:1;
+
 }
+
 
 .kicker{
+
  display:inline-flex;
+
  align-items:center;
+
  gap:8px;
+
  padding:7px 12px;
+
  border-radius:999px;
+
  background:#e6f5f3;
+
  color:var(--teal2);
+
  font-weight:800;
+
  font-size:.85rem;
+
 }
+
 
 .dot{
+
  width:8px;
+
  height:8px;
+
  border-radius:50%;
+
  background:var(--green);
+
  display:inline-block;
+
 }
+
 
 h1{
- font-size:clamp(2.6rem,5vw,5rem);
+
+ font-size:
+   clamp(2.6rem,5vw,5rem);
+
  line-height:1.02;
+
  letter-spacing:-2px;
+
  margin:18px 0 20px;
+
 }
+
 
 h1 em{
+
  font-style:normal;
+
  color:var(--teal);
+
 }
+
 
 .lead{
+
  font-size:1.17rem;
+
  color:var(--muted);
+
  max-width:680px;
+
 }
 
 
-/* =========================
+/* =========================================================
    HERO BANNER
-========================= */
+========================================================= */
 
 .hero-art{
+
  display:flex;
+
  justify-content:center;
+
  align-items:center;
+
+ width:100%;
+
 }
+
 
 .hero-art .device{
+
  width:min(700px,100%);
+
  background:#fff;
+
  border:1px solid var(--line);
+
  border-radius:30px;
+
  padding:12px;
+
  box-shadow:var(--shadow);
+
 }
+
 
 .hero-art .device img{
+
  display:block;
+
  width:100%;
+
  height:auto;
+
  max-height:520px;
+
  object-fit:contain;
+
  border-radius:20px;
+
 }
 
 
-/* =========================
+/* =========================================================
    SECTIONS
-========================= */
+========================================================= */
 
 section{
+
  padding:82px 0;
+
 }
+
 
 .section-title{
+
  max-width:760px;
+
  margin-bottom:34px;
+
 }
+
 
 .section-title .eyebrow{
+
  color:var(--teal);
+
  font-weight:800;
+
  text-transform:uppercase;
+
  letter-spacing:1.4px;
+
  font-size:.8rem;
+
 }
+
 
 h2{
- font-size:clamp(2rem,3.5vw,3rem);
+
+ font-size:
+   clamp(2rem,3.5vw,3rem);
+
  line-height:1.1;
+
  margin:8px 0 12px;
+
 }
+
 
 .section-title p{
+
  color:var(--muted);
+
  font-size:1.05rem;
+
 }
 
 
-/* =========================
+/* =========================================================
    FEATURES
-========================= */
+========================================================= */
 
 .features{
+
  display:grid;
- grid-template-columns:repeat(3,1fr);
+
+ grid-template-columns:
+   repeat(3,1fr);
+
  gap:18px;
+
 }
+
 
 .card{
+
  background:#fff;
+
  border:1px solid var(--line);
+
  border-radius:var(--radius);
+
  padding:26px;
- box-shadow:0 8px 30px rgba(7,35,37,.045);
+
+ box-shadow:
+   0 8px 30px rgba(7,35,37,.045);
+
 }
+
 
 .card .ico{
+
  font-size:1.7rem;
+
  margin-bottom:14px;
+
 }
+
 
 .card h3{
+
  margin:0 0 7px;
+
 }
+
 
 .card p{
+
  margin:0;
+
  color:var(--muted);
+
 }
 
 
-/* =========================
+/* =========================================================
    WORKFLOW
-========================= */
+========================================================= */
 
 .workflow{
+
  background:var(--dark);
+
  color:#fff;
+
 }
+
 
 .workflow .section-title p{
+
  color:#b9ccca;
+
 }
+
 
 .workflow .section-title .eyebrow{
+
  color:#73d5cf;
+
 }
+
 
 .steps{
+
  display:grid;
- grid-template-columns:repeat(4,1fr);
+
+ grid-template-columns:
+   repeat(4,1fr);
+
  gap:16px;
+
 }
+
 
 .step{
- border:1px solid rgba(255,255,255,.13);
- background:rgba(255,255,255,.055);
+
+ border:
+   1px solid rgba(255,255,255,.13);
+
+ background:
+   rgba(255,255,255,.055);
+
  border-radius:20px;
+
  padding:22px;
+
 }
+
 
 .step b{
+
  display:grid;
+
  place-items:center;
+
  width:38px;
+
  height:38px;
+
  border-radius:12px;
+
  background:#e6f5f3;
+
  color:var(--teal2);
+
  margin-bottom:18px;
+
 }
+
 
 .step h3{
+
  margin:0 0 6px;
+
 }
+
 
 .step p{
+
  margin:0;
+
  color:#b9ccca;
+
  font-size:.95rem;
+
 }
 
 
-/* =========================
+/* =========================================================
    GALLERY
-========================= */
+========================================================= */
 
 .gallery{
+
  display:grid;
- grid-template-columns:repeat(5,1fr);
+
+ grid-template-columns:
+   repeat(5,1fr);
+
  gap:16px;
+
 }
+
 
 .shot{
+
  margin:0;
+
  background:#fff;
+
  border:1px solid var(--line);
+
  border-radius:20px;
+
  padding:9px;
- box-shadow:0 9px 28px rgba(7,35,37,.06);
+
+ box-shadow:
+   0 9px 28px rgba(7,35,37,.06);
+
  cursor:zoom-in;
- transition:.2s;
+
+ transition:
+   transform .2s,
+   box-shadow .2s;
+
 }
+
 
 .shot:hover{
- transform:translateY(-3px);
- box-shadow:0 14px 35px rgba(7,35,37,.10);
+
+ transform:
+   translateY(-3px);
+
+ box-shadow:
+   0 14px 35px rgba(7,35,37,.10);
+
 }
+
 
 .shot img{
+
  display:block;
+
  width:100%;
+
  height:390px;
+
  object-fit:cover;
+
  object-position:top;
+
  border-radius:14px;
+
  background:#0b1718;
+
 }
+
 
 .shot figcaption{
+
  padding:11px 6px 4px;
+
  font-weight:800;
+
  font-size:.93rem;
+
 }
 
 
-/* =========================
+/* =========================================================
    DOWNLOADS
-========================= */
+========================================================= */
 
 .download-wrap{
+
  background:
- linear-gradient(
-   135deg,
-   #073f3d,
-   #092427
- );
+   linear-gradient(
+     135deg,
+     #073f3d,
+     #092427
+   );
+
  border-radius:32px;
+
  padding:44px;
+
  color:#fff;
+
  box-shadow:var(--shadow);
+
 }
+
 
 .download-wrap .section-title .eyebrow{
+
  color:#73d5cf;
+
 }
+
 
 .download-wrap p{
+
  color:#bdd0cf;
+
 }
+
 
 .downloads{
+
  display:grid;
+
  grid-template-columns:1fr;
+
  gap:16px;
+
  margin-top:24px;
+
 }
+
 
 .download{
+
  background:#fff;
+
  color:var(--ink);
+
  border-radius:20px;
+
  padding:25px;
+
 }
+
 
 .download h3{
+
  margin:0 0 5px;
+
 }
+
 
 .download p{
+
  color:var(--muted);
+
  margin:0;
+
 }
+
 
 .download .btn{
+
  margin-top:16px;
+
 }
 
 
-/* =========================
+/* =========================================================
    BUTTONS
-========================= */
+========================================================= */
 
 .btn{
+
  display:inline-flex;
+
  align-items:center;
+
  justify-content:center;
+
  gap:9px;
+
  padding:13px 19px;
+
  border-radius:13px;
+
  font-weight:800;
+
  border:1px solid transparent;
+
  transition:.2s;
+
 }
+
 
 .btn.primary{
+
  background:var(--teal);
+
  color:#fff;
- box-shadow:0 10px 25px rgba(8,125,120,.18);
+
+ box-shadow:
+   0 10px 25px rgba(8,125,120,.18);
+
 }
+
 
 .btn.primary:hover{
+
  background:var(--teal2);
- transform:translateY(-2px);
+
+ transform:
+   translateY(-2px);
+
 }
 
 
-/* =========================
+/* =========================================================
    NOTICE
-========================= */
+========================================================= */
 
 .notice{
+
  margin-top:18px;
+
  background:#fff8e1;
+
  border:1px solid #efd37a;
+
  color:#5f542f;
+
  border-radius:18px;
+
  padding:22px;
+
 }
+
 
 .notice h3{
+
  margin-top:0;
+
  color:#4f461f;
+
 }
 
 
-/* =========================
+/* =========================================================
    INFORMATION
-========================= */
+========================================================= */
 
 .info{
+
  display:grid;
- grid-template-columns:repeat(4,1fr);
+
+ grid-template-columns:
+   repeat(4,1fr);
+
  gap:14px;
+
 }
+
 
 .info div{
+
  background:#fff;
+
  border:1px solid var(--line);
+
  border-radius:17px;
+
  padding:18px;
+
 }
+
 
 .info strong{
+
  display:block;
+
  margin-bottom:4px;
+
 }
+
 
 .info span{
+
  color:var(--muted);
+
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
+
  padding:45px 0;
+
  color:#657575;
+
  text-align:center;
+
  background:#fff;
- border-top:1px solid var(--line);
+
+ border-top:
+   1px solid var(--line);
+
 }
+
 
 .footer-main{
+
  font-weight:800;
+
  color:var(--ink);
+
  margin-bottom:10px;
+
 }
+
 
 .footer-links{
+
  display:flex;
+
  justify-content:center;
+
  flex-wrap:wrap;
+
  gap:10px 22px;
+
  margin:12px 0;
+
 }
+
 
 .footer-links a:hover{
+
  color:var(--teal);
+
 }
+
 
 .footer-small{
+
  font-size:.88rem;
+
  line-height:1.7;
+
  max-width:850px;
+
  margin:12px auto 0;
+
 }
 
 
-/* =========================
+/* =========================================================
    MODAL
-========================= */
+========================================================= */
 
 .modal{
+
  position:fixed;
+
  inset:0;
- background:rgba(2,13,15,.84);
+
+ background:
+   rgba(2,13,15,.84);
+
  display:none;
+
  align-items:center;
+
  justify-content:center;
+
  padding:25px;
+
  z-index:100;
+
 }
+
 
 .modal.open{
+
  display:flex;
+
 }
+
 
 .modal img{
+
  max-height:92vh;
+
  max-width:min(1100px,94vw);
+
  border-radius:18px;
- box-shadow:0 20px 70px rgba(0,0,0,.4);
+
+ box-shadow:
+   0 20px 70px rgba(0,0,0,.4);
+
 }
+
 
 .modal button{
+
  position:fixed;
+
  right:22px;
+
  top:18px;
+
  border:0;
+
  background:#fff;
+
  color:#073f3d;
+
  width:44px;
+
  height:44px;
+
  border-radius:50%;
+
  font-size:25px;
+
  cursor:pointer;
+
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media(max-width:980px){
 
  .hero-grid{
+
   grid-template-columns:1fr;
+
  }
 
  .hero-art{
+
   order:-1;
+
  }
 
  .hero-art .device{
+
   width:min(700px,92%);
+
  }
 
  .features{
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
  }
 
  .steps{
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
  }
 
  .gallery{
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
  }
 
  .shot img{
+
   height:350px;
+
  }
 
  .info{
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
  }
 
 }
 
+
+/* =========================================================
+   RESPONSIVE — MÓVIL
+========================================================= */
+
 @media(max-width:680px){
 
  .navlinks{
+
   display:none;
+
  }
 
  .nav{
+
   min-height:66px;
+
  }
 
  .navcta{
+
   padding:9px 12px;
+
  }
 
  .hero{
+
   padding:55px 0;
+
  }
 
  .hero-grid{
+
   gap:28px;
+
  }
 
  h1{
+
   letter-spacing:-1px;
+
  }
 
  section{
+
   padding:60px 0;
+
  }
 
  .features,
  .steps,
  .info{
+
   grid-template-columns:1fr;
+
  }
 
  .gallery{
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
  }
 
  .shot img{
+
   height:330px;
+
  }
 
  .download-wrap{
+
   padding:28px 20px;
+
   border-radius:24px;
+
  }
 
  .footer-links{
+
   flex-direction:column;
+
   gap:8px;
+
+ }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TELÉFONOS PEQUEÑOS
+========================================================= */
+
+@media(max-width:420px){
+
+ .gallery{
+
+  grid-template-columns:1fr;
+
+ }
+
+ .shot img{
+
+  height:auto;
+
+  max-height:none;
+
+ }
+
+ .brand span{
+
+  font-size:1rem;
+
+ }
+
+ .navcta{
+
+  font-size:.85rem;
+
+ }
+
+ .hero-art .device{
+
+  width:100%;
+
+  padding:8px;
+
+  border-radius:22px;
+
+ }
+
+ .hero-art .device img{
+
+  border-radius:15px;
+
  }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =======================================================
      HEADER
-========================= -->
+======================================================= -->
 
 <header>
 
  <div class="container nav">
+
 
   <a
    class="brand"
@@ -746,23 +1303,33 @@ footer{
     alt="Logo TERRYGES"
    >
 
-   <span>TERRYGES</span>
+   <span>
+    TERRYGES
+   </span>
 
   </a>
 
 
   <nav
    class="navlinks"
-   aria-label="Navegación"
+   aria-label="Navegación principal"
   >
 
-   <a href="#funciones">Funciones</a>
+   <a href="#funciones">
+    Funciones
+   </a>
 
-   <a href="#proceso">Flujo</a>
+   <a href="#proceso">
+    Flujo
+   </a>
 
-   <a href="#capturas">Capturas</a>
+   <a href="#capturas">
+    Capturas
+   </a>
 
-   <a href="#descargas">Descargas</a>
+   <a href="#descargas">
+    Descargas
+   </a>
 
   </nav>
 
@@ -774,18 +1341,23 @@ footer{
    Descargar V1.1.0
   </a>
 
+
  </div>
 
 </header>
 
 
 
+<!-- =======================================================
+     MAIN
+======================================================= -->
+
 <main>
 
 
-<!-- =========================
+<!-- =======================================================
      HERO
-========================= -->
+======================================================= -->
 
 <section
  class="hero"
@@ -796,6 +1368,7 @@ footer{
 
 
   <div>
+
 
    <span class="kicker">
 
@@ -812,7 +1385,9 @@ footer{
 
     <br>
 
-    <em>organizado.</em>
+    <em>
+     organizado.
+    </em>
 
    </h1>
 
@@ -826,11 +1401,16 @@ footer{
 
    </p>
 
+
   </div>
 
 
 
-  <!-- BANNER PRINCIPAL -->
+  <!-- =====================================================
+       BANNER PRINCIPAL
+       ARCHIVO:
+       assets/branding/banner-inicial.png
+  ====================================================== -->
 
   <div class="hero-art">
 
@@ -852,9 +1432,9 @@ footer{
 
 
 
-<!-- =========================
+<!-- =======================================================
      FUNCIONES
-========================= -->
+======================================================= -->
 
 <section id="funciones">
 
@@ -872,9 +1452,11 @@ footer{
    </h2>
 
    <p>
+
     La interfaz de TERRYGES está organizada para que
     cada usuario encuentre rápidamente lo que necesita
     según sus permisos.
+
    </p>
 
   </div>
@@ -886,13 +1468,19 @@ footer{
 
    <article class="card">
 
-    <div class="ico">🗺️</div>
+    <div class="ico">
+     🗺️
+    </div>
 
-    <h3>Mapa territorial</h3>
+    <h3>
+     Mapa territorial
+    </h3>
 
     <p>
+
      Visualiza los territorios y sus coordenadas
      con una interfaz orientada al trabajo de campo.
+
     </p>
 
    </article>
@@ -901,13 +1489,19 @@ footer{
 
    <article class="card">
 
-    <div class="ico">📍</div>
+    <div class="ico">
+     📍
+    </div>
 
-    <h3>Territorios</h3>
+    <h3>
+     Territorios
+    </h3>
 
     <p>
+
      Consulta ciudades, sectores y territorios
      con estados claramente identificados.
+
     </p>
 
    </article>
@@ -916,13 +1510,19 @@ footer{
 
    <article class="card">
 
-    <div class="ico">📋</div>
+    <div class="ico">
+     📋
+    </div>
 
-    <h3>Solicitudes</h3>
+    <h3>
+     Solicitudes
+    </h3>
 
     <p>
+
      Realiza y administra solicitudes de territorio
      con seguimiento del estado correspondiente.
+
     </p>
 
    </article>
@@ -931,13 +1531,19 @@ footer{
 
    <article class="card">
 
-    <div class="ico">👤</div>
+    <div class="ico">
+     👤
+    </div>
 
-    <h3>Mis territorios</h3>
+    <h3>
+     Mis territorios
+    </h3>
 
     <p>
+
      Accede directamente a los territorios
      que han sido asignados a cada usuario.
+
     </p>
 
    </article>
@@ -946,13 +1552,19 @@ footer{
 
    <article class="card">
 
-    <div class="ico">⚙️</div>
+    <div class="ico">
+     ⚙️
+    </div>
 
-    <h3>Gestión</h3>
+    <h3>
+     Gestión
+    </h3>
 
     <p>
+
      Las funciones administrativas se concentran
      en el módulo de Gestión según el rol autorizado.
+
     </p>
 
    </article>
@@ -961,13 +1573,19 @@ footer{
 
    <article class="card">
 
-    <div class="ico">🔄</div>
+    <div class="ico">
+     🔄
+    </div>
 
-    <h3>Sincronización</h3>
+    <h3>
+     Sincronización
+    </h3>
 
     <p>
+
      Trabajo integrado con la infraestructura central
      para mantener la información actualizada.
+
     </p>
 
    </article>
@@ -981,9 +1599,9 @@ footer{
 
 
 
-<!-- =========================
+<!-- =======================================================
      FLUJO
-========================= -->
+======================================================= -->
 
 <section
  class="workflow"
@@ -1004,9 +1622,11 @@ footer{
    </h2>
 
    <p>
+
     El flujo mantiene separados los territorios
     disponibles, las solicitudes pendientes
     y los territorios asignados.
+
    </p>
 
   </div>
@@ -1018,13 +1638,19 @@ footer{
 
    <div class="step">
 
-    <b>1</b>
+    <b>
+     1
+    </b>
 
-    <h3>Consultar</h3>
+    <h3>
+     Consultar
+    </h3>
 
     <p>
+
      Explora territorios disponibles
      desde Territorios o el Mapa.
+
     </p>
 
    </div>
@@ -1033,13 +1659,19 @@ footer{
 
    <div class="step">
 
-    <b>2</b>
+    <b>
+     2
+    </b>
 
-    <h3>Solicitar</h3>
+    <h3>
+     Solicitar
+    </h3>
 
     <p>
+
      Envía una solicitud para
      el territorio que corresponde.
+
     </p>
 
    </div>
@@ -1048,13 +1680,19 @@ footer{
 
    <div class="step">
 
-    <b>3</b>
+    <b>
+     3
+    </b>
 
-    <h3>Gestionar</h3>
+    <h3>
+     Gestionar
+    </h3>
 
     <p>
+
      El usuario autorizado revisa
      y aprueba o rechaza la solicitud.
+
     </p>
 
    </div>
@@ -1063,13 +1701,19 @@ footer{
 
    <div class="step">
 
-    <b>4</b>
+    <b>
+     4
+    </b>
 
-    <h3>Asignar</h3>
+    <h3>
+     Asignar
+    </h3>
 
     <p>
+
      Una vez aprobado, el territorio
      aparece como asignado al usuario.
+
     </p>
 
    </div>
@@ -1083,9 +1727,9 @@ footer{
 
 
 
-<!-- =========================
+<!-- =======================================================
      CAPTURAS
-========================= -->
+======================================================= -->
 
 <section id="capturas">
 
@@ -1103,8 +1747,10 @@ footer{
    </h2>
 
    <p>
+
     Estas son capturas reales de la aplicación desarrollada.
     Haz clic sobre cualquiera para verla en tamaño completo.
+
    </p>
 
   </div>
@@ -1113,6 +1759,8 @@ footer{
 
   <div class="gallery">
 
+
+   <!-- 01 -->
 
    <figure
     class="shot"
@@ -1134,6 +1782,8 @@ footer{
 
 
 
+   <!-- 02 -->
+
    <figure
     class="shot"
     data-full="assets/capturas/02-inicio.jpg?v=2"
@@ -1153,6 +1803,8 @@ footer{
    </figure>
 
 
+
+   <!-- 03 -->
 
    <figure
     class="shot"
@@ -1174,6 +1826,8 @@ footer{
 
 
 
+   <!-- 04 -->
+
    <figure
     class="shot"
     data-full="assets/capturas/04-territorios.jpg?v=2"
@@ -1193,6 +1847,8 @@ footer{
    </figure>
 
 
+
+   <!-- 05 -->
 
    <figure
     class="shot"
@@ -1214,6 +1870,8 @@ footer{
 
 
 
+   <!-- 06 -->
+
    <figure
     class="shot"
     data-full="assets/capturas/06-solicitudes.jpg?v=2"
@@ -1233,6 +1891,8 @@ footer{
    </figure>
 
 
+
+   <!-- 07 -->
 
    <figure
     class="shot"
@@ -1254,6 +1914,8 @@ footer{
 
 
 
+   <!-- 08 -->
+
    <figure
     class="shot"
     data-full="assets/capturas/08-mis-territorios.jpg?v=2"
@@ -1273,6 +1935,8 @@ footer{
    </figure>
 
 
+
+   <!-- 09 -->
 
    <figure
     class="shot"
@@ -1294,7 +1958,7 @@ footer{
 
 
 
-   <!-- IMAGEN 10 ACTUALIZADA -->
+   <!-- 10 -->
 
    <figure
     class="shot"
@@ -1323,9 +1987,9 @@ footer{
 
 
 
-<!-- =========================
+<!-- =======================================================
      DESCARGAS
-========================= -->
+======================================================= -->
 
 <section id="descargas">
 
@@ -1349,8 +2013,10 @@ footer{
     </h2>
 
     <p>
+
      Descarga la aplicación oficial de TERRYGES
      para dispositivos Android.
+
     </p>
 
    </div>
@@ -1367,14 +2033,18 @@ footer{
      </h3>
 
      <p>
+
       Aplicación en formato APK para dispositivos Android.
+
      </p>
 
      <a
       class="btn primary"
       href="https://github.com/elias1488mega-source/-terryges/releases/download/v.1.1.0/TerryGes.apk"
      >
+
       📱 Descargar TerryGes.apk
+
      </a>
 
     </article>
@@ -1391,17 +2061,21 @@ footer{
     </h3>
 
     <p>
+
      Al instalar el APK desde una fuente externa,
      Android o Google Play Protect puede mostrar
      una advertencia porque la aplicación no procede
      de Google Play.
+
     </p>
 
     <p>
+
      Esa advertencia, por sí sola, no demuestra que
      la aplicación contenga malware. Instala únicamente
      desde la fuente oficial de distribución y verifica
      que la versión sea la indicada.
+
     </p>
 
    </div>
@@ -1415,9 +2089,9 @@ footer{
 
 
 
-<!-- =========================
+<!-- =======================================================
      INFORMACIÓN
-========================= -->
+======================================================= -->
 
 <section>
 
@@ -1507,9 +2181,9 @@ footer{
 
 
 
-<!-- =========================
+<!-- =======================================================
      FOOTER
-========================= -->
+======================================================= -->
 
 <footer>
 
@@ -1528,25 +2202,31 @@ footer{
 
   <div class="footer-links">
 
+
    <a href="#inicio">
     Inicio
    </a>
+
 
    <a href="#funciones">
     Funciones
    </a>
 
+
    <a href="#capturas">
     Capturas
    </a>
+
 
    <a href="#descargas">
     Descargas
    </a>
 
+
    <a href="#seguridad">
     Política de seguridad
    </a>
+
 
   </div>
 
@@ -1584,9 +2264,9 @@ footer{
 
 
 
-<!-- =========================
-     MODAL DE CAPTURAS
-========================= -->
+<!-- =======================================================
+     MODAL
+======================================================= -->
 
 <div
  class="modal"
@@ -1596,8 +2276,10 @@ footer{
  aria-label="Vista ampliada"
 >
 
+
  <button
   id="close"
+  type="button"
   aria-label="Cerrar"
  >
   ×
@@ -1614,6 +2296,10 @@ footer{
 
 
 
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
 <script>
 
 const modal =
@@ -1622,72 +2308,111 @@ const modal =
 const modalImg =
  document.getElementById('modalImg');
 
+const closeButton =
+ document.getElementById('close');
+
+
+/* =========================================================
+   ABRIR CAPTURA
+========================================================= */
 
 document
  .querySelectorAll('.shot')
  .forEach(card => {
 
-  card.addEventListener(
-   'click',
-   () => {
+  card.addEventListener('click', () => {
 
-    modalImg.src =
-     card.dataset.full;
+   const image =
+    card.dataset.full;
 
-    modalImg.alt =
-     card.dataset.title;
+   const title =
+    card.dataset.title;
 
-    modal.classList.add('open');
+   modalImg.src =
+    image;
 
-   }
-  );
+   modalImg.alt =
+    title;
+
+   modal.classList.add('open');
+
+   document.body.style.overflow =
+    'hidden';
+
+  });
 
  });
 
+
+/* =========================================================
+   CERRAR MODAL
+========================================================= */
 
 function closeModal(){
 
  modal.classList.remove('open');
 
- modalImg.src='';
+ modalImg.src = '';
+
+ modalImg.alt = '';
+
+ document.body.style.overflow =
+  '';
 
 }
 
 
-document
- .getElementById('close')
- .addEventListener(
-  'click',
-  closeModal
- );
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
 
+closeButton.addEventListener(
+ 'click',
+ closeModal
+);
+
+
+/* =========================================================
+   CERRAR AL HACER CLIC FUERA
+========================================================= */
 
 modal.addEventListener(
  'click',
- e => {
+ event => {
 
-  if(e.target === modal){
+  if(
+   event.target === modal
+  ){
 
    closeModal();
 
   }
 
- });
+ }
+);
 
+
+/* =========================================================
+   CERRAR CON ESC
+========================================================= */
 
 document.addEventListener(
  'keydown',
- e => {
+ event => {
 
-  if(e.key === 'Escape'){
+  if(
+   event.key === 'Escape'
+  ){
 
    closeModal();
 
   }
 
- );
+ }
+);
 
 </script>
+
 
 </body>
 </html>
